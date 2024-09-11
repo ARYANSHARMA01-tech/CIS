@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CryptoKing</string>
+
+    <!-- Encoding types for the Spinner -->
+    <string-array name="encoding_types">
+        <item>Binary</item>
+        <item>Hex</item>
+        <item>Base64</item>
+    </string-array>
+</resources>

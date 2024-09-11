@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background5"
+    tools:context=".Decoder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <!-- Title Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="DECRPYTOR"
+                android:textStyle="bold"
+                android:textColor="#e4ad84"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+        <!-- Divider 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:background="#66FAFAFA"/>
+        </LinearLayout>
+
+        <!-- Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <!-- Text label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENTER YOUR ENCRYPTED TEXT:"
+                android:textColor="#e4ad84"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:layout_gravity="left"/>
+
+            <!-- EditText input -->
+            <EditText
+                android:id="@+id/etdec"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="#FAFAFA"
+                android:background="@drawable/buttonoutline"
+                android:hint="Enter text to decrypt"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <!-- Spinner for Encoding Type -->
+            <Spinner
+                android:id="@+id/spinner_encoding_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/encoding_types"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Decrypt Button -->
+            <Button
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Decrypt"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/buttonoutline"
+                android:textColor="#1C3A5F"
+                android:onClick="dec"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- Divider 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:background="#66FAFAFA"/>
+        </LinearLayout>
+
+        <!-- Decrypted Text Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+            <!-- Decoded TextView -->
+            <TextView
+                android:id="@+id/dectv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#e4ad84"
+                android:padding="10dp"
+                android:text="YOUR DECODED TEXT HERE"
+                android:layout_gravity="left"/>
+
+            <!-- Copy Button -->
+            <Button
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Copy"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/buttonoutline"
+                android:textColor="#1C3A5F"
+                android:onClick="cp1"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
